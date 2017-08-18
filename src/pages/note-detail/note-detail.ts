@@ -1,5 +1,5 @@
 import { Note } from './../../note';
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
@@ -9,6 +9,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NoteDetail {
 
+  @ViewChild('myInput') myInput: ElementRef;
+
   note: Note;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -17,6 +19,10 @@ export class NoteDetail {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NoteDetail');
+  }
+
+  resize() {
+    this.myInput.nativeElement.style.height = this.myInput.nativeElement.scrollHeight + 'px';
   }
 
 }

@@ -7,16 +7,11 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Editar Nota: {{ note.id }}</ion-title>
+    <ion-title>{{ note.title }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
-<ion-content padding>
-  <ion-card>
-    <ion-card-content>
-      {{ note.content }}
-    </ion-card-content>
-  </ion-card>
+<ion-content>
+  <textarea #myInput id="myInput" (keyup)="resize()" [(ngModel)]="note.content"></textarea>
 </ion-content>
