@@ -1,3 +1,4 @@
+import { AutoresizeDirective } from './../components/autoresize/autoresize';
 import { NoteDetail } from './../pages/note-detail/note-detail';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -16,7 +17,8 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     NoteDetail,
-    ExcerptFilter
+    ExcerptFilter,
+    AutoresizeDirective
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     ExcerptFilter,
+    AutoresizeDirective,
     Storage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: LOCALE_ID, useValue: "pt-BR"}
